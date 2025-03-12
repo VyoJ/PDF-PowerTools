@@ -140,7 +140,7 @@ export class PdfOperationsProvider
   private operations: PdfOperation[] = [
     new PdfOperation("Merge PDFs", "mergePdfs"),
     new PdfOperation("Split PDF", "splitPdf"),
-    new PdfOperation("Preview all PDFs", "openPdfPreview"),
+    new PdfOperation("View all PDFs", "openPdfPreview"),
   ];
 
   getTreeItem(element: PdfOperation): vscode.TreeItem {
