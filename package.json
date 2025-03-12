@@ -14,18 +14,97 @@
   "contributes": {
     "commands": [
       {
-        "command": "pdf-powertools.hello",
-        "title": "Hello"
-      },
-      {
         "command": "pdf-powertools.mergePdfs",
         "title": "Merge PDFs"
       },
       {
         "command": "pdf-powertools.splitPdf",
         "title": "Split PDF"
+      },
+      {
+        "command": "pdf-powertools.openPdfPreview",
+        "title": "Open PDF Preview"
+      },
+      {
+        "command": "pdf-powertools.addPdfFiles",
+        "title": "Add PDF Files",
+        "icon": "$(add)"
+      },
+      {
+        "command": "pdf-powertools.refreshPdfFiles",
+        "title": "Refresh",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "pdf-powertools.removePdfFile",
+        "title": "Remove",
+        "icon": "$(trash)"
+      },
+      {
+        "command": "pdf-powertools.previewPdfFile",
+        "title": "Preview",
+        "icon": "$(preview)"
       }
-    ]
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "pdf-powertools-explorer",
+          "title": "PDF PowerTools",
+          "icon": "$(file-pdf)"
+        }
+      ]
+    },
+    "views": {
+      "pdf-powertools-explorer": [
+        {
+          "id": "pdf-files",
+          "icon": "$(file-pdf)",
+          "name": "PDF Files"
+        },
+        {
+          "id": "pdf-operations",
+          "icon": "$(file-pdf)",
+          "name": "Operations"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "pdf-files",
+        "contents": "No PDFs added yet.\n[Add PDF Files](command:pdf-powertools.addPdfFiles)"
+      },
+      {
+        "view": "pdf-operations",
+        "contents": "Select PDF files to enable operations.\n[Open PDF Preview](command:pdf-powertools.openPdfPreview)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "pdf-powertools.addPdfFiles",
+          "when": "view == pdf-files",
+          "group": "navigation"
+        },
+        {
+          "command": "pdf-powertools.refreshPdfFiles",
+          "when": "view == pdf-files",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "pdf-powertools.removePdfFile",
+          "when": "view == pdf-files",
+          "group": "inline"
+        },
+        {
+          "command": "pdf-powertools.previewPdfFile",
+          "when": "view == pdf-files",
+          "group": "inline"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
