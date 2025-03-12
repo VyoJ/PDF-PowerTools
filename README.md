@@ -1,31 +1,68 @@
-# pdf-powertools README
+# PDF PowerTools for VS Code
 
-This is the README for your extension "pdf-powertools". After writing up a brief description, we recommend including the following sections.
+PDF PowerTools is a Visual Studio Code extension that provides essential PDF manipulation capabilities directly within your editor. Work with your PDF files offline, without needing to use online services that might compromise document privacy or require internet connectivity.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- _Merge PDFs_: Combine multiple PDF documents into a single file
+- _Split PDFs_: Divide a PDF into multiple files based on custom page ranges
+- _Preview PDFs_: Open PDFs with your system's default PDF viewer
 
-For example if there is an image subfolder under your extension project workspace:
+## Installation
 
-\!\[feature X\]\(images/feature-x.png\)
+1. Open VS Code
+2. Go to Extensions (Ctrl+Shift+X)
+3. Search for "PDF PowerTools"
+4. Click Install
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## How to Use
+
+### Managing PDF Files
+
+- Click the PDF PowerTools icon in the Activity Bar
+- Use the "Add PDF Files" button to import PDF files
+- Your PDF files will appear in the "PDF Files" view
+- Right-click on files or use the inline buttons to:
+  1. Remove a file from the workspace
+  2. Preview the PDF with your default viewer
+
+### Merging PDFs
+
+- Add the PDFs you want to merge to the workspace
+- Click "Merge PDFs" in the Operations view (or use command palette)
+- The merged PDF will be created in the same directory as the first PDF with "\_merged" suffix
+
+### Splitting a PDF
+
+- Select a PDF file in the workspace (or you'll be prompted to choose one)
+- Click "Split PDF" in the Operations view (or use command palette)
+- Enter page ranges in the format "1-3, 4-6, 7-10"
+- The split PDFs will be created in the same directory with appropriate page range suffixes
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- Visual Studio Code version 1.98.0 or higher
+- A PDF viewer installed on your system
 
-## Extension Settings
+## Limitations
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+- Large PDFs (>100MB) may be slow to process
+- The extension uses your system's default PDF viewer rather than providing an in-editor preview
+- Currently limited to basic operations (merge, split, view)
 
-For example:
+## Future Plans
 
-This extension contributes the following settings:
+Upcoming features being considered for future releases:
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+- In-editor PDF viewer
+- Deleting and reordering PDF pages
+- PDF text extraction and search
+- PDF compression and optimization
+- PDF annotation and markup tools
+
+## Privacy & Security
+
+PDF PowerTools processes all files locally on your machine. Your documents are never uploaded to any server, ensuring complete privacy and security of your sensitive documents.
 
 ## Known Issues
 
@@ -33,39 +70,22 @@ Calling out known issues can help limit users opening duplicate issues against y
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 0.0.1 - Initial Release
 
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+- PDF file management
+- PDF merging functionality
+- PDF splitting with custom page ranges
+- External PDF preview
 
 ---
 
-## Following extension guidelines
+## Feedback & Contributions
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+File issues at GitHub repository
+Contributions are welcome!
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+## License
 
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+This extension is released under the MIT License.
 
 **Enjoy!**
