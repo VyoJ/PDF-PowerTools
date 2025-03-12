@@ -77,7 +77,7 @@ PDF PowerTools processes all files locally on your machine. Your documents are n
 
 ## Feedback & Contributions
 
-File issues at GitHub repository
+File issues at the [GitHub repo](https://github.com/VyoJ/PDF-PowerTools)
 
 Contributions are welcome!
 
