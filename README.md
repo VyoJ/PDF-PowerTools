@@ -82,6 +82,7 @@ Calling out known issues can help limit users opening duplicate issues against y
 ## Feedback & Contributions
 
 File issues at GitHub repository
+
 Contributions are welcome!
 
 ## License
