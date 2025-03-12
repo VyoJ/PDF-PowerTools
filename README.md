@@ -64,10 +64,6 @@ Upcoming features being considered for future releases:
 
 PDF PowerTools processes all files locally on your machine. Your documents are never uploaded to any server, ensuring complete privacy and security of your sensitive documents.
 
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
 ## Release Notes
 
 ### 0.0.1 - Initial Release
